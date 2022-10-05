@@ -1,0 +1,13 @@
+@import url('./styles/loading.css');
+@import url('./styles/nav.css');
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  position: relative;
+}
