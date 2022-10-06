@@ -26,3 +26,11 @@ export const getAllProductsService = async () => (
     }
   }).then(res => res.data.data.products)
 )
+
+export const getPurchases = async() => (
+  axios.get(API + '/purchases', {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }).then(res => res.data.data.purchases)
+)

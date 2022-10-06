@@ -3,6 +3,7 @@ import { ImCart } from 'react-icons/im'
 import { BiPurchaseTagAlt } from 'react-icons/bi'
 import { AiOutlineUser } from 'react-icons/ai'
 import '../index.css'
+import { Link } from "react-router-dom"
 
 const Nav = () => {
   return (
@@ -16,9 +17,13 @@ const Nav = () => {
 
       <div className="navMenuOptions">
         <ul className="d-flex m-0 list-inline">
-          <li className="mx-5"> <AiOutlineUser /> </li>
-          <li className="mx-5"> <BiPurchaseTagAlt /> </li>
-          <li className="mx-5"> <ImCart /> </li>
+          <Link to={'/account'}>
+            <li className="mx-5"> <AiOutlineUser /> </li>
+          </Link>
+          <Link to={'/purchases'}>
+            <li className="mx-5"> <BiPurchaseTagAlt /> </li>
+          </Link>
+            <li className="mx-5"> <ImCart /> </li>
         </ul>
       </div>
 

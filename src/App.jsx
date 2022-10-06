@@ -6,6 +6,8 @@ import { Loading } from './pages/Loading'
 import { Login } from './pages/Login'
 import { Home } from './pages/Home'
 import { Nav } from './components/Nav'
+import { Purchases } from './pages/Purchases'
+import { Account } from './pages/Account'
 
 function App() {
 
@@ -21,8 +23,10 @@ function App() {
           {/* {credentialSlice.token && <Nav />}  */}
           <Nav />
           <Routes>
-            <Route path='/login' element={<Login />} />
             <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/account' element={<Account />} />
+            <Route path='/purchases' element={<Purchases />} />
           </Routes>
         </BrowserRouter>
     </div>
