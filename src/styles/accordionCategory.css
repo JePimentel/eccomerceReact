@@ -1,0 +1,22 @@
+.accordionContainer .accordion {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.accordionContainer .accordion .accordion-button {
+  font-size: 1.6rem;
+}
+
+.accordionContainer .accordion .accordion-body li {
+  list-style: none;
+  border-bottom: 1px solid #e6e6e6;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+}
+.accordionContainer .accordion .accordion-body li:hover {
+  background-color: #f5f5f5;
+}
+
+.accordionContainer .accordion-item div:last-child .accordion-body li {
+  border-bottom: none;
+}
