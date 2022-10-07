@@ -1,5 +1,7 @@
 @import url('./styles/loading.css');
 @import url('./styles/nav.css');
+@import url('./styles//accordionCategory.css');
+@import url('./styles/home.css');
 
 html {
   font-size: 62.5%;

@@ -44,7 +44,7 @@ const AccordionCategory = () => {
   }, [])
 
   return (
-    <div>
+    <div className='accordionContainer'>
       <Accordion open={open} toggle={toggle}>
         <AccordionItem>
           <AccordionHeader targetId='1'> Categories </AccordionHeader>

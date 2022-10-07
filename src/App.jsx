@@ -6,6 +6,7 @@ import { Loading } from './pages/Loading'
 import { Login } from './pages/Login'
 import { Home } from './pages/Home'
 import { Nav } from './components/Nav'
+import { ProductDetail } from './pages/ProductDetail'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path='/login' element={<Login />} />
             <Route path='/' element={<Home />} />
+            <Route path='/product/:id' element={<ProductDetail />} />
           </Routes>
         </BrowserRouter>
     </div>

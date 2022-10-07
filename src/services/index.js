@@ -26,3 +26,11 @@ export const getAllProductsService = async () => (
     }
   }).then(res => res.data.data.products)
 )
+
+export const getProductById = async (id) => (
+  await axios.get( API + `/products/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }).then(r => r.data.data.product)
+)
