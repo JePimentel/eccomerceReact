@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { CarouselImgs } from "../components/Carousel"
+// import { CarouselImgs } from "../components/Carousel"
 import { isLoading } from "../redux/slices/loadingSlice"
 import { getProductById } from "../services"
-import { UncontrolledCarousel } from "reactstrap"
 
 const ProductDetail = () => {
 
