@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { 
   Button, 
@@ -11,12 +11,13 @@ import {
 } from "reactstrap"
 import { AccordionCategory } from "../components/AccordionCategory"
 import { getProducts } from "../redux/slices/productsSlice"
-import { getAllProductsService } from "../services"
+import { getAllProductsService, sendProductToCart } from "../services"
 import { IoMdAdd } from 'react-icons/io'
 import { Link } from "react-router-dom"
 
 const Home = () => {
   
+  const [productAdded, setProductAdded] = useState({})
   const products = useSelector(state => state.productsSlice)
   const isLoading = useSelector(state => state.loadingSlice)
   const dispatch = useDispatch()
@@ -26,6 +27,13 @@ const Home = () => {
       .then(res => dispatch(getProducts(res)))
   }, [])
 
+  const addProductToCart = id => {
+    sendProductToCart(id, 1)
+      .then(r => r)
+      .catch(err => alert(err))
+  }
+ 
+  console.log(productAdded)
   return (
     <div className="home">
       <AccordionCategory />
@@ -54,7 +62,9 @@ const Home = () => {
                       <p className="priceTitle">Price</p>
                       <p>${p.price}</p>
                   </CardText>
-                  <Button>
+                  <Button
+                    onClick={() => addProductToCart(p.id)}
+                  >
                     <IoMdAdd />
                   </Button>
                 </CardBody>

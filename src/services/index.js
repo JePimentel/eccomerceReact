@@ -34,3 +34,14 @@ export const getProductById = async (id) => (
     }
   }).then(r => r.data.data.product)
 )
+
+export const sendProductToCart = async (id, quantity) => {
+  const body = {id: id, quantity: quantity}
+    
+    await axios.post(API + '/cart', body, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }).then(r => r)
+    .catch(err => err.message)
+}

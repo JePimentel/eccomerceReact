@@ -2,6 +2,7 @@
 @import url('./styles/nav.css');
 @import url('./styles/accordionCategory.css');
 @import url('./styles/home.css');
+@import url('./styles//cart.css');
 
 html {
   font-size: 62.5%;
